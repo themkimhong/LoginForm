@@ -19,6 +19,7 @@ export default function CommentPage() {
   const [data, setData] = useState<Array<any>>();
   useEffect(() => {
     postsService().then((res) => {
+      //@ts-ignore
       setData(res.data.data);
     });
   }, []);

@@ -8,17 +8,18 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { usersService } from "../services/user.service";
-
+import { PostPage } from "./post.page"
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
   },
 });
 
-export default function UserPage() {
+export function UserPage() {
   const [data, setData] = useState<Array<any>>();
   useEffect(() => {
     usersService().then((res) => {
+      //@ts-ignore
       setData(res.data.data);
     });
   }, []);

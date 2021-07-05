@@ -10,7 +10,7 @@ import "../styles/index.css";
 function App() {
   return (
     <div>
-      <AuthProvider token="9999">
+      <AuthProvider >
         <RouteView />
       </AuthProvider>
     </div>
